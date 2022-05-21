@@ -1,0 +1,43 @@
+@use "../utils" as u;
+
+/* paddings */
+.py-30px {
+  padding-top: u.rem(30);
+  padding-bottom: u.rem(30);
+}
+.py-50px {
+  padding-top: u.rem(50);
+  padding-bottom: u.rem(50);
+}
+.py-70px {
+  padding-top: u.rem(70);
+  padding-bottom: u.rem(70);
+}
+.py-100px {
+  padding-top: u.rem(100);
+  padding-bottom: u.rem(100);
+}
+.py-150px {
+  padding-top: u.rem(150);
+  padding-bottom: u.rem(150);
+}
+.py-200px {
+  padding-top: u.rem(200);
+  padding-bottom: u.rem(200);
+}
+.pt-88px {
+  padding-top: u.rem(88);
+}
+.pt-0 {
+  padding-top: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+
+@include u.breakpoint(large) {
+  .py-100px {
+    padding-top: u.rem(60);
+    padding-bottom: u.rem(60);
+  }
+}

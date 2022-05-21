@@ -1,0 +1,144 @@
+@use "../utils" as u;
+
+/* margins */
+.mb-5px {
+  margin-bottom: u.rem(5);
+}
+.mb-10px {
+  margin-bottom: u.rem(10);
+}
+.mb-15px {
+  margin-bottom: u.rem(15);
+}
+.mb-20px {
+  margin-bottom: u.rem(20);
+}
+.mb-25px {
+  margin-bottom: u.rem(25);
+}
+.mb-30px {
+  margin-bottom: u.rem(30);
+}
+.mb-35px {
+  margin-bottom: u.rem(35);
+}
+.mb-40px {
+  margin-bottom: u.rem(40);
+}
+.mb-45px {
+  margin-bottom: u.rem(45);
+}
+.mb-50px {
+  margin-bottom: u.rem(50);
+}
+.mb-55px {
+  margin-bottom: u.rem(55);
+}
+.mb-60px {
+  margin-bottom: u.rem(60);
+}
+.mb-70px {
+  margin-bottom: u.rem(70);
+}
+.mb-75px {
+  margin-bottom: u.rem(75);
+}
+.mb-80px {
+  margin-bottom: u.rem(80);
+}
+.mb-100px {
+  margin-bottom: u.rem(100);
+}
+.mb-110px {
+  margin-bottom: u.rem(110);
+}
+.mb-120px {
+  margin-bottom: u.rem(120);
+}
+.mb-130px {
+  margin-bottom: u.rem(130);
+}
+.mb-140px {
+  margin-bottom: u.rem(140);
+}
+.mb-150px {
+  margin-bottom: u.rem(150);
+}
+.mb-160px {
+  margin-bottom: u.rem(160);
+}
+.mb-170px {
+  margin-bottom: u.rem(170);
+}
+.mb-180px {
+  margin-bottom: u.rem(180);
+}
+.mb-190px {
+  margin-bottom: u.rem(190);
+}
+.mb-200px {
+  margin-bottom: u.rem(200);
+}
+.mb-250px {
+  margin-bottom: u.rem(250);
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.mt-88px {
+  margin-top: u.rem(88);
+}
+.mt-100px {
+  margin-top: u.rem(100);
+}
+.mt-110px {
+  margin-top: u.rem(110);
+}
+.mt-120px {
+  margin-top: u.rem(120);
+}
+
+@include u.breakpoint(twoxLarge) {
+  .mb-50px {
+    margin-bottom: u.rem(40);
+  }
+  .mb-45px {
+    margin-bottom: u.rem(35);
+  }
+  .mb-35px {
+    margin-bottom: u.rem(25);
+  }
+  .mb-55px {
+    margin-bottom: u.rem(40);
+  }
+  .mb-80px {
+    margin-bottom: u.rem(50);
+  }
+}
+
+@include u.breakpoint(large) {
+  .mb-100px {
+    margin-bottom: u.rem(60);
+  }
+  .mb-150px {
+    margin-bottom: u.rem(80);
+  }
+  .mb-120px {
+    margin-bottom: u.rem(80);
+  }
+  .mb-140px {
+    margin-bottom: u.rem(80);
+  }
+  .mb-80px {
+    margin-bottom: u.rem(50);
+  }
+  .mb-70px {
+    margin-bottom: u.rem(40);
+  }
+
+  .mb-80px {
+    margin-bottom: u.rem(40);
+  }
+}
