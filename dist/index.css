@@ -1144,6 +1144,7 @@ main {
 }
 main header {
   flex: 1;
+  padding: 3.125rem 0;
 }
 main header .sub-title {
   max-width: 25.25rem;
@@ -1216,26 +1217,6 @@ main .phones {
   left: 50%;
   bottom: 0%;
   transform: translateX(-50%);
-}
-@media (max-width: 106.25em) {
-  main .phones {
-    max-width: 37.5rem;
-  }
-}
-@media (max-width: 80em) {
-  main .phones {
-    max-width: 28.125rem !important;
-  }
-}
-@media (max-height: 48.75rem) {
-  main .phones {
-    max-width: 31.25rem;
-  }
-}
-@media (max-height: 42.5rem) {
-  main .phones {
-    max-width: 25rem;
-  }
 }
 main .phones .phone-title {
   font-size: 1vw;
@@ -1366,6 +1347,29 @@ main .phones div.active .arrow {
 }
 main .phones div.active-2 {
   transform: scale(1) translateY(16%);
+}
+@media (max-width: 106.25em) {
+  main .phones {
+    max-width: 37.5rem;
+  }
+}
+@media (max-width: 80em) {
+  main .phones {
+    max-width: 28.125rem !important;
+  }
+}
+@media (max-height: 48.75rem) {
+  main .phones {
+    max-width: 31.25rem;
+  }
+}
+@media (max-height: 42.5rem) {
+  main .phones {
+    max-width: 25rem;
+  }
+  main .phones .phone-title {
+    font-size: 0.625rem;
+  }
 }
 main footer {
   display: flex;
