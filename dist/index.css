@@ -755,6 +755,12 @@ a {
   padding-bottom: 0;
 }
 
+@media (max-width: 80em) {
+  .py-50px {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+}
 @media (max-width: 64em) {
   .py-100px {
     padding-top: 3.75rem;
@@ -1110,21 +1116,34 @@ input {
   transform: translateY(-50%);
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 3.25rem;
+  margin: 1rem;
+}
+.logo p {
+  font-size: 2.25rem;
+}
+@media (max-width: 47.5em) {
+  .logo img {
+    width: 2.5rem;
+  }
+  .logo p {
+    font-size: 1.75rem;
+  }
+}
+
 main {
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 main header {
   flex: 1;
-}
-main header .logo {
-  width: 10.4375rem;
-}
-@media (max-width: 47.5em) {
-  main header .logo {
-    width: 8.75rem;
-  }
 }
 main header .sub-title {
   max-width: 25.25rem;
@@ -1161,8 +1180,33 @@ main header .buttons button:nth-child(2) {
 main header .buttons > :not(:last-child) {
   margin-right: 1rem;
 }
+main header .footer {
+  display: none;
+}
+@media (max-width: 80em) {
+  main header .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.875rem;
+    flex-direction: column;
+  }
+  main header .footer .links {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  main header .footer .links > :not(:last-child) {
+    margin-right: 1rem;
+  }
+  main header .footer .links a {
+    opacity: 0.6;
+  }
+}
 main .phones {
-  max-width: 50rem;
+  max-width: 43.75rem;
   width: 85%;
   display: flex;
   justify-content: center;
@@ -1178,12 +1222,17 @@ main .phones {
     max-width: 37.5rem;
   }
 }
-@media (max-height: 780px) {
+@media (max-width: 80em) {
+  main .phones {
+    max-width: 28.125rem !important;
+  }
+}
+@media (max-height: 48.75rem) {
   main .phones {
     max-width: 31.25rem;
   }
 }
-@media (max-height: 680px) {
+@media (max-height: 42.5rem) {
   main .phones {
     max-width: 25rem;
   }
@@ -1195,10 +1244,11 @@ main .phones .phone-title {
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
+  transform: translate3d(0, 0, 0);
 }
 @media (max-width: 80em) {
   main .phones .phone-title {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 47.5em) {
@@ -1216,6 +1266,7 @@ main .phones .arrow {
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none;
+  will-change: transform;
 }
 main .phones .one .phone-title {
   top: -8%;
@@ -1225,7 +1276,7 @@ main .phones .one .phone-title {
 main .phones .one .arrow {
   left: 110%;
   top: 6%;
-  width: 26%;
+  width: 24%;
 }
 @media (max-width: 40em) {
   main .phones .one .phone-title {
@@ -1243,7 +1294,7 @@ main .phones .two .phone-title {
 main .phones .two .arrow {
   left: 110%;
   top: 6%;
-  width: 26%;
+  width: 24%;
 }
 @media (max-width: 40em) {
   main .phones .two .phone-title {
@@ -1283,19 +1334,25 @@ main .phones .three .phone-title {
 main .phones .three .arrow {
   right: 110%;
   top: 6%;
-  width: 26%;
+  width: 22%;
   transform: rotateY(180deg);
 }
 main .phones div {
   width: 100%;
   z-index: -1;
-  transform: translateZ(0) scale(1);
-  transition: all 0.3s ease;
+  transform: scale(1);
+  transition: all 0.4s ease;
   opacity: 0.5;
   margin-bottom: -20%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+main .phones div p {
+  -webkit-font-smoothing: antialiased;
+}
+main .phones div img {
+  -webkit-font-smoothing: antialiased;
 }
 main .phones div.active {
   transform: scale(1.4);
@@ -1308,7 +1365,30 @@ main .phones div.active .arrow {
   opacity: 1;
 }
 main .phones div.active-2 {
-  transform: translateZ(0) scale(1) translateY(16%);
+  transform: scale(1) translateY(16%);
+}
+main footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+main footer .links {
+  display: flex;
+  align-items: center;
+}
+main footer .links > :not(:last-child) {
+  margin-right: 1.125rem;
+}
+main footer .links a {
+  opacity: 0.6;
+}
+@media (max-width: 80em) {
+  main footer {
+    display: none;
+  }
 }
 
 .about-us .about-ribbon {
@@ -1335,15 +1415,9 @@ main .phones div.active-2 {
   padding: 2.5rem 0;
   margin-bottom: 2.5rem;
 }
-.about-us nav .logo {
-  width: 10.4375rem;
-}
 @media (max-width: 47.5em) {
   .about-us nav {
     margin-bottom: 0rem;
-  }
-  .about-us nav .logo {
-    width: 7.5rem;
   }
 }
 .about-us .about-card {
