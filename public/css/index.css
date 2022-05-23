@@ -1344,7 +1344,7 @@ input {
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
-    border: 2px solid pink;
+    border: 6px solid blue;
     height: 100vh !important;
   }
   .main header {
@@ -1358,7 +1358,11 @@ input {
     border: 2px solid green;
   }
   .main footer {
-    border: 2px solid red;
+    position: static !important;
+    top: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    transform: unset !important;
   }
 }
 @media (max-height: 660px) and (max-width: 1000px) {
@@ -1375,6 +1379,13 @@ input {
   }
   .main header .buttons button:nth-child(2) {
     width: 80px !important;
+  }
+  .main footer {
+    position: static !important;
+    top: unset !important;
+    bottom: unset !important;
+    left: unset !important;
+    transform: unset !important;
   }
   .main footer .fs-14px {
     font-size: 0.625rem;
@@ -1432,7 +1443,9 @@ input {
   .main footer {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.875rem !important;
+    bottom: unset !important;
+    transform: unset !important;
     text-align: center;
   }
   .main footer > :not(:last-child) {

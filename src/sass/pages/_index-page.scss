@@ -200,7 +200,7 @@
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
-    border: 2px solid pink;
+    border: 6px solid blue;
     height: 100vh !important;
 
     header {
@@ -216,9 +216,11 @@
     }
 
     footer {
-      border: 2px solid red;
-      // margin-bottom: 0 !important;
-      // flex: 1;
+      position: static !important;
+      top: unset !important;
+      bottom: unset !important;
+      left: unset !important;
+      transform: unset !important;
     }
   }
 }
@@ -245,6 +247,11 @@
     }
 
     footer {
+      position: static !important;
+      top: unset !important;
+      bottom: unset !important;
+      left: unset !important;
+      transform: unset !important;
       .fs-14px {
         font-size: rem(10);
       }
@@ -323,7 +330,9 @@
     footer {
       flex-direction: column;
       align-items: center;
-      margin-bottom: rem(30);
+      margin-bottom: rem(30) !important;
+      bottom: unset !important;
+      transform: unset !important;
       text-align: center;
 
       & > :not(:last-child) {
