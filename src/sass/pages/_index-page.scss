@@ -3,7 +3,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 
   header {
@@ -199,11 +199,18 @@
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
+    border: 2px solid black;
+
+    header {
+      border: 2px solid white;
+    }
+
     .phones {
       flex: unset !important;
       width: 80% !important;
       max-width: 260px !important;
       margin-top: 0 !important;
+      border: 2px solid green;
     }
 
     footer {
