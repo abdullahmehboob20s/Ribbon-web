@@ -1191,8 +1191,9 @@ input {
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh !important;
   overflow: hidden;
+  justify-content: space-between;
 }
 .main header {
   padding: 3.125rem 0;
@@ -1220,7 +1221,6 @@ input {
   display: none;
 }
 .main .phones {
-  flex: 1;
   margin: 0 auto;
   width: 38%;
   display: flex;
@@ -1343,8 +1343,8 @@ input {
 
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
-    justify-content: center;
-    border: 6px solid white;
+    justify-content: space-between;
+    border: 2px solid pink;
     height: 100vh !important;
   }
   .main header {
