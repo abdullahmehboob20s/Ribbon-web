@@ -50,4 +50,8 @@
 }
 .hidden {
   overflow: hidden;
+
+  @include u.breakpoint(small) {
+    overflow: visible !important;
+  }
 }

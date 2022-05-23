@@ -1120,6 +1120,11 @@ li {
 .hidden {
   overflow: hidden;
 }
+@media (max-width: 40em) {
+  .hidden {
+    overflow: visible !important;
+  }
+}
 
 .static {
   position: static;
@@ -1350,6 +1355,9 @@ input {
     width: 80% !important;
     max-width: 260px !important;
     margin-top: 0 !important;
+  }
+  .main footer {
+    border: 2px solid red;
   }
 }
 @media (max-height: 660px) and (max-width: 1000px) {
