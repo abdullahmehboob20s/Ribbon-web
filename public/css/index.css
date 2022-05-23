@@ -1333,6 +1333,18 @@ input {
   opacity: 0.6;
 }
 
+@media (max-height: 740px) and (max-width: 1000px) {
+  .main .phones {
+    width: 80% !important;
+    max-width: 300px !important;
+    margin-top: 0 !important;
+  }
+}
+@media (max-height: 660px) and (max-width: 1000px) {
+  .main .phones {
+    max-width: 180px !important;
+  }
+}
 @media (max-width: 106.25em) {
   .main header .buttons button:nth-child(1) {
     width: 132px;
@@ -1411,18 +1423,6 @@ input {
   }
   .main footer .links > :not(:last-child) {
     margin-right: 0.75rem;
-  }
-}
-@media (max-height: 680px) {
-  .main .phones {
-    width: 80% !important;
-    max-width: 260px !important;
-    margin-top: 0 !important;
-  }
-}
-@media (max-height: 560px) {
-  .main .phones {
-    max-width: 220px !important;
   }
 }
 .about-us .about-ribbon {

@@ -196,6 +196,24 @@
 // ==================================================================================
 // ==================================================================================
 
+@media (max-height: 740px) and (max-width: 1000px) {
+  .main {
+    .phones {
+      width: 80% !important;
+      max-width: 300px !important;
+      margin-top: 0 !important;
+    }
+  }
+}
+
+@media (max-height: 660px) and (max-width: 1000px) {
+  .main {
+    .phones {
+      max-width: 180px !important;
+    }
+  }
+}
+
 @include breakpoint(twoxLarge) {
   .main {
     header {
@@ -311,23 +329,6 @@
           margin-right: rem(12);
         }
       }
-    }
-  }
-}
-
-@media (max-height: 680px) {
-  .main {
-    .phones {
-      width: 80% !important;
-      max-width: 260px !important;
-      margin-top: 0 !important;
-    }
-  }
-}
-@media (max-height: 560px) {
-  .main {
-    .phones {
-      max-width: 220px !important;
     }
   }
 }
