@@ -734,6 +734,14 @@ a {
   .mb-80px {
     margin-bottom: 2.5rem;
   }
+
+  .mb-25px {
+    margin-bottom: 1.125rem;
+  }
+
+  .mb-30px {
+    margin-bottom: 1.375rem;
+  }
 }
 .opacity-1 {
   opacity: 1;
@@ -1334,15 +1342,33 @@ input {
 }
 
 @media (max-height: 740px) and (max-width: 1000px) {
+  .main {
+    justify-content: space-between;
+  }
   .main .phones {
+    flex: unset !important;
     width: 80% !important;
-    max-width: 300px !important;
+    max-width: 260px !important;
     margin-top: 0 !important;
   }
 }
 @media (max-height: 660px) and (max-width: 1000px) {
+  .main {
+    justify-content: space-between;
+  }
   .main .phones {
-    max-width: 180px !important;
+    flex: unset !important;
+    max-width: 200px !important;
+    margin-top: 0% !important;
+  }
+  .main header .buttons button:nth-child(1) {
+    width: 90px !important;
+  }
+  .main header .buttons button:nth-child(2) {
+    width: 80px !important;
+  }
+  .main footer .fs-14px {
+    font-size: 0.625rem;
   }
 }
 @media (max-width: 106.25em) {
