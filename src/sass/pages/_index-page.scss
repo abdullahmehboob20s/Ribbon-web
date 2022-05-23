@@ -199,6 +199,7 @@
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     .phones {
+      flex: unset !important;
       width: 80% !important;
       max-width: 300px !important;
       margin-top: 0 !important;
@@ -210,6 +211,7 @@
 @media (max-height: 660px) and (max-width: 1000px) {
   .main {
     .phones {
+      flex: unset !important;
       max-width: 180px !important;
       border: 2px solid green !important;
     }
