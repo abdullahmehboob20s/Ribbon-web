@@ -1,0 +1,41 @@
+/* COLORS */
+
+$pink: #f193b1;
+$light-blue: #f5f6f8;
+$red: #ef233c;
+$green: #02929b;
+$light-yellow: #dcf289;
+
+.black {
+  color: #000000;
+}
+.white {
+  color: #fafcff;
+}
+.pink {
+  color: $pink;
+}
+.red {
+  color: $red;
+}
+.green {
+  color: $green;
+}
+.light-yellow {
+  color: $light-yellow;
+}
+
+// BACKGROUNDS
+
+.bg-pink {
+  background-color: $pink;
+}
+.bg-light-blue {
+  background-color: $light-blue;
+}
+.bg-red {
+  background-color: $red;
+}
+.bg-green {
+  background-color: $green;
+}
