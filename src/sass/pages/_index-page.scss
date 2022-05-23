@@ -7,7 +7,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh !important;
+  min-height: var(--screen-height) !important;
   overflow: hidden;
   justify-content: space-between;
 
@@ -204,7 +204,6 @@
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
-    height: 100vh !important;
 
     .phones {
       flex: unset !important;
