@@ -1234,23 +1234,35 @@ input {
   position: relative;
   --arrow-width: 2.8vw;
   --mobile-font-size: 0.9vw;
+  --tranistion: all 0.4s ease;
 }
 .main .phones .phone {
   width: 100%;
   transform: scale3d(1, 1, 1);
-  transition: all 0.4s ease;
-  opacity: 0.5;
+  transition: var(--tranistion);
   width: 100%;
   min-height: 100%;
   display: flex;
   position: relative;
+}
+.main .phones .phone::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 34, 42, 0.5);
+  z-index: 10;
+  border-radius: 12%;
+  transition: var(--tranistion);
 }
 .main .phones .phone .mobile-img {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s ease;
+  transition: var(--tranistion);
   outline: 1px solid transparent;
 }
 .main .phones .phone-assets {
@@ -1274,8 +1286,11 @@ input {
   transition: all 0.4s ease;
   width: var(--arrow-width) !important;
 }
+.main .phones .one {
+  margin-right: -6%;
+}
 .main .phones .one .phone-assets {
-  left: 88%;
+  left: 74%;
   top: -10%;
   align-items: center;
 }
@@ -1286,7 +1301,7 @@ input {
   margin-right: var(--arrow-width);
 }
 .main .phones .two .phone-assets {
-  left: 80%;
+  left: 73%;
   top: -10%;
   align-items: center;
 }
@@ -1296,8 +1311,11 @@ input {
 .main .phones .two .phone-assets .arrow {
   margin-right: var(--arrow-width);
 }
+.main .phones .three {
+  margin-left: -6%;
+}
 .main .phones .three .phone-assets {
-  right: 84%;
+  right: 74%;
   top: -10%;
   align-items: center;
 }
@@ -1313,6 +1331,9 @@ input {
   z-index: 10;
   opacity: 1;
 }
+.main .phones .phone.active::before {
+  background-color: rgba(30, 34, 42, 0);
+}
 .main .phones .phone.active .phone-assets {
   opacity: 1;
 }
@@ -1320,7 +1341,7 @@ input {
   filter: drop-shadow(0px 0px 30px rgb(0, 0, 0));
 }
 .main .phones div.active-2 {
-  transform: scale3d(1, 1, 1) translateY(16%);
+  transform: scale3d(0.8, 0.8, 0.8);
   z-index: -20;
 }
 .main footer {

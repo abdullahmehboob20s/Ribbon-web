@@ -20,6 +20,7 @@ for (let i = 0; i < phonesArr.length; i++) {
       phonesArr[2].classList.add("active-2");
     } else if (phonesArr.indexOf(phonesArr[i]) === 2) {
       phonesArr[0].classList.add("active-2");
+      // phonesArr[0].style.marginRight = "-5%";
     } else {
       phonesArr[2].classList.remove("active-2");
     }
