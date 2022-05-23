@@ -1346,7 +1346,7 @@ main .phones div.active .arrow {
   opacity: 1;
 }
 main .phones div.active-2 {
-  transform: scale(1) translateY(16%);
+  transform: scale3d(1, 1, 1) translateY(16%);
 }
 @media (max-width: 106.25em) {
   main .phones {
