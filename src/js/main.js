@@ -1,4 +1,4 @@
-const phones = document.querySelectorAll(".phones div");
+const phones = document.querySelectorAll(".phone");
 var phonesArr = Array.from(phones);
 
 for (let i = 0; i < phonesArr.length; i++) {

@@ -9,7 +9,7 @@
     "copy:html": "copyfiles -u 1 ./src/*.html public",
     "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
     "copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
-    "watch:assets": "onchange \"/src/assets/**/*\" -- npm run copy:assets",
+    "watch:assets": "onchange \"src/assets/**/*\" -- npm run copy:assets",
     "copy:js": "copyfiles -u 1 ./src/js/**/* public",
     "watch:js": "onchange \"src/js/**/*\" -- npm run copy:js",
     "copy": "npm-run-all --parallel copy:*",

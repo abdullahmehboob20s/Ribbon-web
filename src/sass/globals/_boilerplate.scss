@@ -60,16 +60,38 @@ body {
   justify-content: center;
 
   img {
-    width: u.rem(52);
+    width: u.rem(60);
     margin-right: u.rem(16);
   }
   p {
-    font-size: u.rem(36);
+    font-size: u.rem(46);
   }
 }
 
 @include u.breakpoint(twoxLarge) {
   .ribbon {
     height: 50vw;
+  }
+
+  .logo {
+    img {
+      width: u.rem(52);
+      margin-right: u.rem(16);
+    }
+    p {
+      font-size: u.rem(36);
+    }
+  }
+}
+
+@include u.breakpoint(large) {
+  .logo {
+    img {
+      width: u.rem(38);
+      margin-right: u.rem(14);
+    }
+    p {
+      font-size: u.rem(28);
+    }
   }
 }

@@ -6,10 +6,10 @@
   --fs-8px: #{u.rem(8)};
   --fs-10px: #{u.rem(10)};
   --fs-12px: #{u.rem(12)};
-  --fs-14px: #{u.rem(14)};
+  --fs-14px: #{u.rem(18)};
   --fs-16px: #{u.rem(16)};
   --fs-18px: #{u.rem(18)};
-  --fs-20px: #{u.rem(20)};
+  --fs-20px: #{u.rem(22)};
   --fs-22px: #{u.rem(22)};
   --fs-24px: #{u.rem(24)};
   --fs-26px: #{u.rem(26)};
@@ -19,7 +19,7 @@
   --fs-34px: #{u.rem(34)};
   --fs-36px: #{u.rem(36)};
   --fs-38px: #{u.rem(38)};
-  --fs-40px: #{u.rem(40)};
+  --fs-40px: #{u.rem(50)};
   --fs-42px: #{u.rem(42)};
   --fs-44px: #{u.rem(44)};
   --fs-46px: #{u.rem(46)};
@@ -286,6 +286,9 @@ a {
   }
   .fs-20px {
     font-size: #{u.rem(18)};
+  }
+  .fs-14px {
+    font-size: #{u.rem(14)};
   }
 }
 @include u.breakpoint(xLarge) {
