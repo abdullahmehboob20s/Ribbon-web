@@ -37,6 +37,48 @@ body {
   font-family: "Indie Flower", cursive;
 }
 
+.ribbon {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+}
+.ribbon.one {
+  top: 0;
+  left: 0;
+}
+.ribbon.two {
+  top: 0;
+  right: 0;
+}
+.ribbon.one {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.ribbon.two {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 3.25rem;
+  margin-right: 1rem;
+}
+.logo p {
+  font-size: 2.25rem;
+}
+
+@media (max-width: 106.25em) {
+  .ribbon {
+    height: 50vw;
+  }
+}
 :root {
   --fs-4px: 0.25rem;
   --fs-6px: 0.375rem;
@@ -1087,54 +1129,36 @@ input {
   grid-column: span 2;
 }
 
-.ribbon {
+.tooltip {
   position: absolute;
-  height: 100%;
-  z-index: -1;
-}
-.ribbon.one {
-  top: 0;
-  left: 0;
-}
-.ribbon.two {
-  top: 0;
-  right: 0;
-}
-@media (max-width: 80em) {
-  .ribbon {
-    height: 50vw;
-  }
-}
-.ribbon.one {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-.ribbon.two {
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+  bottom: 130%;
+  right: 10%;
+  background-color: #dcf289;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6.20148px;
+  color: black;
+  font-weight: 600;
+  cursor: auto;
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.1875rem);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0.375rem;
+  height: 0.375rem;
+  background-color: #dcf289;
+  transform: rotate(45deg);
+  z-index: -1;
 }
-.logo img {
-  width: 3.25rem;
-  margin: 1rem;
-}
-.logo p {
-  font-size: 2.25rem;
-}
-@media (max-width: 47.5em) {
-  .logo img {
-    width: 2.5rem;
-  }
-  .logo p {
-    font-size: 1.75rem;
-  }
+
+.tooltip-parent:hover .tooltip {
+  opacity: 1;
 }
 
 main {
@@ -1145,11 +1169,6 @@ main {
 main header {
   flex: 1;
   padding: 3.125rem 0;
-}
-@media (max-width: 80em) {
-  main header {
-    padding: 1.875rem 0;
-  }
 }
 main header .sub-title {
   max-width: 25.25rem;
@@ -1167,49 +1186,11 @@ main header .buttons button:nth-child(1) {
 main header .buttons button:nth-child(2) {
   width: 144px;
 }
-@media (max-width: 106.25em) {
-  main header .buttons button:nth-child(1) {
-    width: 132px;
-  }
-  main header .buttons button:nth-child(2) {
-    width: 114px;
-  }
-}
-@media (max-width: 40em) {
-  main header .buttons button:nth-child(1) {
-    width: 112px;
-  }
-  main header .buttons button:nth-child(2) {
-    width: 94px;
-  }
-}
 main header .buttons > :not(:last-child) {
   margin-right: 1rem;
 }
 main header .footer {
   display: none;
-}
-@media (max-width: 80em) {
-  main header .footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 1.875rem;
-    flex-direction: column;
-  }
-  main header .footer .links {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-  }
-  main header .footer .links > :not(:last-child) {
-    margin-right: 1rem;
-  }
-  main header .footer .links a {
-    opacity: 0.6;
-  }
 }
 main .phones {
   max-width: 43.75rem;
@@ -1231,21 +1212,6 @@ main .phones .phone-title {
   opacity: 0;
   transform: scale3d(1, 1, 1);
 }
-@media (max-width: 80em) {
-  main .phones .phone-title {
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 47.5em) {
-  main .phones .phone-title {
-    font-size: 0.75rem;
-  }
-}
-@media (max-width: 31.25rem) {
-  main .phones .phone-title {
-    font-size: 0.625rem;
-  }
-}
 main .phones .arrow {
   position: absolute;
   transition: all 0.4s ease;
@@ -1263,14 +1229,6 @@ main .phones .one .arrow {
   top: 6%;
   width: 24%;
 }
-@media (max-width: 40em) {
-  main .phones .one .phone-title {
-    top: -20%;
-  }
-  main .phones .one .arrow {
-    top: 0%;
-  }
-}
 main .phones .two .phone-title {
   top: -8%;
   left: 105%;
@@ -1280,36 +1238,6 @@ main .phones .two .arrow {
   left: 110%;
   top: 6%;
   width: 24%;
-}
-@media (max-width: 40em) {
-  main .phones .two .phone-title {
-    top: -18%;
-    left: 50%;
-    width: 70%;
-    transform: translateX(-50%);
-    width: inherit;
-  }
-  main .phones .two .arrow {
-    left: 85%;
-    top: -14%;
-    width: 26%;
-    transform: rotate(-70deg);
-  }
-}
-@media (max-width: 31.25rem) {
-  main .phones .two .phone-title {
-    top: -28%;
-    left: 50%;
-    width: 70%;
-    transform: translateX(-50%);
-    width: inherit;
-  }
-  main .phones .two .arrow {
-    left: 85%;
-    top: -14%;
-    width: 26%;
-    transform: rotate(-70deg);
-  }
 }
 main .phones .three .phone-title {
   top: -8%;
@@ -1348,29 +1276,6 @@ main .phones div.active .arrow {
 main .phones div.active-2 {
   transform: scale3d(1, 1, 1) translateY(16%);
 }
-@media (max-width: 106.25em) {
-  main .phones {
-    max-width: 37.5rem;
-  }
-}
-@media (max-width: 80em) {
-  main .phones {
-    max-width: 28.125rem !important;
-  }
-}
-@media (max-height: 48.75rem) {
-  main .phones {
-    max-width: 31.25rem;
-  }
-}
-@media (max-height: 42.5rem) {
-  main .phones {
-    max-width: 25rem;
-  }
-  main .phones .phone-title {
-    font-size: 0.625rem;
-  }
-}
 main footer {
   display: flex;
   align-items: center;
@@ -1389,12 +1294,111 @@ main footer .links > :not(:last-child) {
 main footer .links a {
   opacity: 0.6;
 }
+
+@media (max-width: 106.25em) {
+  main header .buttons button:nth-child(1) {
+    width: 132px;
+  }
+  main header .buttons button:nth-child(2) {
+    width: 114px;
+  }
+  main .phones {
+    max-width: 37.5rem;
+  }
+}
 @media (max-width: 80em) {
+  main header {
+    padding: 1.875rem 0;
+  }
+  main header .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.875rem;
+    flex-direction: column;
+  }
+  main header .footer .links {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  main header .footer .links > :not(:last-child) {
+    margin-right: 1rem;
+  }
+  main header .footer .links a {
+    opacity: 0.6;
+  }
+  main .phones {
+    max-width: 28.125rem !important;
+  }
+  main .phones .phone-title {
+    font-size: 0.75rem;
+  }
   main footer {
     display: none;
   }
 }
-
+@media (max-width: 47.5em) {
+  main .phones {
+    max-width: 31.25rem;
+  }
+  main .phones .phone-title {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 40em) {
+  main header .buttons button:nth-child(1) {
+    width: 112px;
+  }
+  main header .buttons button:nth-child(2) {
+    width: 94px;
+  }
+  main .phones {
+    max-width: 25rem;
+  }
+  main .phones .phone-title {
+    font-size: 0.625rem;
+  }
+  main .phones .one .phone-title {
+    top: -20%;
+  }
+  main .phones .one .arrow {
+    top: 0%;
+  }
+  main .phones .two .phone-title {
+    top: -18%;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    width: inherit;
+  }
+  main .phones .two .arrow {
+    left: 85%;
+    top: -14%;
+    width: 26%;
+    transform: rotate(-70deg);
+  }
+}
+@media (max-width: 31.25em) {
+  main .phones .phone-title {
+    font-size: 0.625rem;
+  }
+  main .phones .two .phone-title {
+    top: -28%;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    width: inherit;
+  }
+  main .phones .two .arrow {
+    left: 85%;
+    top: -14%;
+    width: 26%;
+    transform: rotate(-70deg);
+  }
+}
 .about-us .about-ribbon {
   position: absolute;
 }
@@ -1403,11 +1407,6 @@ main footer .links a {
   top: 20%;
   z-index: -1;
   width: 20vw;
-}
-@media (max-width: 64em) {
-  .about-us .about-ribbon.one {
-    top: 40%;
-  }
 }
 .about-us .about-ribbon.two {
   right: 0;
@@ -1418,11 +1417,6 @@ main footer .links a {
 .about-us nav {
   padding: 2.5rem 0;
   margin-bottom: 2.5rem;
-}
-@media (max-width: 47.5em) {
-  .about-us nav {
-    margin-bottom: 0rem;
-  }
 }
 .about-us .about-card {
   display: flex;
@@ -1438,36 +1432,6 @@ main footer .links a {
 }
 .about-us .about-card img {
   flex: 1;
-}
-@media (max-width: 80em) {
-  .about-us .about-card {
-    padding: 2.375rem 2.375rem;
-  }
-  .about-us .about-card img {
-    width: 40%;
-  }
-  .about-us .about-card aside {
-    flex: 2;
-    margin-right: 2.5rem;
-    padding: unset;
-  }
-}
-@media (max-width: 64em) {
-  .about-us .about-card {
-    flex-direction: column-reverse;
-  }
-  .about-us .about-card img {
-    width: 100%;
-  }
-  .about-us .about-card aside {
-    margin-right: 0rem;
-    margin-top: 1.25rem;
-  }
-}
-@media (max-width: 40em) {
-  .about-us .about-card {
-    padding: 1.625rem 1.625rem;
-  }
 }
 .about-us .team {
   padding: 4.25rem 3.5rem;
@@ -1491,7 +1455,49 @@ main footer .links a {
 .about-us .team .team-card div img {
   width: 100%;
 }
+.about-us footer header {
+  display: flex;
+  justify-content: center;
+}
+.about-us footer header > :not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (max-width: 80em) {
+  .about-us .about-card {
+    padding: 2.375rem 2.375rem;
+  }
+  .about-us .about-card img {
+    width: 40%;
+  }
+  .about-us .about-card aside {
+    flex: 2;
+    margin-right: 2.5rem;
+    padding: unset;
+  }
+}
+@media (max-width: 64em) {
+  .about-us .about-ribbon.one {
+    top: 40%;
+  }
+  .about-us .about-card {
+    flex-direction: column-reverse;
+  }
+  .about-us .about-card img {
+    width: 100%;
+  }
+  .about-us .about-card aside {
+    margin-right: 0rem;
+    margin-top: 1.25rem;
+  }
+}
 @media (max-width: 47.5em) {
+  .about-us nav {
+    margin-bottom: 0rem;
+  }
+  .about-us .team {
+    padding: 2.375rem 2.25rem;
+  }
   .about-us .team .team-card {
     flex-direction: column;
   }
@@ -1504,22 +1510,13 @@ main footer .links a {
     width: 100%;
   }
 }
-@media (max-width: 47.5em) {
-  .about-us .team {
-    padding: 2.375rem 2.25rem;
-  }
-}
 @media (max-width: 40em) {
+  .about-us .about-card {
+    padding: 1.625rem 1.625rem;
+  }
   .about-us .team {
     padding: 1.625rem 1.625rem;
   }
-}
-.about-us footer header {
-  display: flex;
-  justify-content: center;
-}
-.about-us footer header > :not(:last-child) {
-  margin-right: 1rem;
 }
 @media (max-width: 31.25em) {
   .about-us footer header > :not(:last-child) {
@@ -1528,36 +1525,4 @@ main footer .links a {
   .about-us footer header a {
     font-size: 0.75rem;
   }
-}
-
-.tooltip {
-  position: absolute;
-  bottom: 130%;
-  right: 10%;
-  background-color: #dcf289;
-  padding: 0.25rem 0.5rem;
-  border-radius: 6.20148px;
-  color: black;
-  font-weight: 600;
-  cursor: auto;
-  transition: all 0.2s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.tooltip::before {
-  content: "";
-  position: absolute;
-  top: calc(100% - 0.1875rem);
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0.375rem;
-  height: 0.375rem;
-  background-color: #dcf289;
-  transform: rotate(45deg);
-  z-index: -1;
-}
-
-.tooltip-parent:hover .tooltip {
-  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,32 @@
+@use "../utils" as *;
+
+// TOOLTIPS
+.tooltip {
+  position: absolute;
+  bottom: 130%;
+  right: 10%;
+  background-color: #dcf289;
+  padding: rem(4) rem(8);
+  border-radius: 6.20148px;
+  color: black;
+  font-weight: 600;
+  cursor: auto;
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: calc(100% - rem(3));
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(6);
+  height: rem(6);
+  background-color: #dcf289;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+.tooltip-parent:hover .tooltip {
+  opacity: 1;
+}

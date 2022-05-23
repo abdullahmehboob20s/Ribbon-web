@@ -1,0 +1,180 @@
+@use "../utils" as *;
+
+.about-us {
+  .about-ribbon {
+    position: absolute;
+  }
+
+  .about-ribbon.one {
+    left: 0;
+    top: 20%;
+    z-index: -1;
+    width: 20vw;
+  }
+  .about-ribbon.two {
+    right: 0;
+    top: 80%;
+    z-index: -1;
+    width: 20vw;
+  }
+
+  nav {
+    padding: rem(40) 0;
+    margin-bottom: rem(40);
+  }
+
+  .about-card {
+    display: flex;
+    align-items: center;
+    background-color: #252933;
+    padding: rem(8);
+    border-radius: rem(16);
+
+    aside {
+      flex: 1;
+      margin-right: rem(40);
+      padding: rem(58) rem(58);
+    }
+    img {
+      flex: 1;
+    }
+  }
+
+  .team {
+    padding: rem(68) rem(56);
+    background: #252933;
+    border-radius: rem(16);
+
+    .team-cards-wrapper {
+      display: grid;
+      gap: rem(60);
+    }
+
+    .team-card {
+      display: flex;
+
+      aside {
+        flex: 1;
+      }
+
+      div {
+        flex: 0.6;
+        margin-right: rem(55);
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  footer {
+    header {
+      display: flex;
+      justify-content: center;
+
+      & > :not(:last-child) {
+        margin-right: rem(16);
+      }
+    }
+  }
+}
+
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+// ============================ BREAKPOINT ==========================================
+// ==================================================================================
+// ==================================================================================
+// ==================================================================================
+
+@include breakpoint(xLarge) {
+  // ABOUT-US
+  .about-us {
+    .about-card {
+      padding: rem(38) rem(38);
+
+      img {
+        width: 40%;
+      }
+
+      aside {
+        flex: 2;
+        margin-right: rem(40);
+        padding: unset;
+      }
+    }
+  }
+}
+@include breakpoint(large) {
+  // ABOUT-US
+  .about-us {
+    .about-ribbon.one {
+      top: 40%;
+    }
+
+    .about-card {
+      flex-direction: column-reverse;
+      img {
+        width: 100%;
+      }
+      aside {
+        margin-right: rem(0);
+        margin-top: rem(20);
+      }
+    }
+  }
+}
+@include breakpoint(medium) {
+  // ABOUT-US
+  .about-us {
+    nav {
+      margin-bottom: rem(0);
+    }
+
+    .team {
+      padding: rem(38) rem(36);
+
+      .team-card {
+        flex-direction: column;
+        div {
+          flex: 1;
+          margin-right: rem(0);
+          margin-bottom: rem(30);
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@include breakpoint(small) {
+  // ABOUT-US
+  .about-us {
+    .about-card {
+      padding: rem(26) rem(26);
+    }
+
+    .team {
+      padding: rem(26) rem(26);
+    }
+  }
+}
+@include breakpoint(xsmall) {
+  // ABOUT-US
+  .about-us {
+    footer {
+      header {
+        & > :not(:last-child) {
+          margin-right: rem(10);
+        }
+
+        a {
+          font-size: rem(12);
+        }
+      }
+    }
+  }
+}

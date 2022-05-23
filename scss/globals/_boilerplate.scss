@@ -27,3 +27,49 @@ body {
 .font-flower {
   font-family: u.$font-flower;
 }
+
+.ribbon {
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+
+  &.one {
+    top: 0;
+    left: 0;
+  }
+  &.two {
+    top: 0;
+    right: 0;
+  }
+
+  &.one {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  &.two {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: u.rem(52);
+    margin-right: u.rem(16);
+  }
+  p {
+    font-size: u.rem(36);
+  }
+}
+
+@include u.breakpoint(twoxLarge) {
+  .ribbon {
+    height: 50vw;
+  }
+}
