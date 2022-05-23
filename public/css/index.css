@@ -1188,6 +1188,10 @@ input {
   opacity: 1;
 }
 
+:root {
+  --screen-height: 100vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -1344,25 +1348,13 @@ input {
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
-    border: 6px solid blue;
     height: 100vh !important;
-  }
-  .main header {
-    border: 2px solid white;
   }
   .main .phones {
     flex: unset !important;
     width: 80% !important;
     max-width: 260px !important;
     margin-top: 0 !important;
-    border: 2px solid green;
-  }
-  .main footer {
-    position: static !important;
-    top: unset !important;
-    bottom: unset !important;
-    left: unset !important;
-    transform: unset !important;
   }
 }
 @media (max-height: 660px) and (max-width: 1000px) {
@@ -1379,13 +1371,6 @@ input {
   }
   .main header .buttons button:nth-child(2) {
     width: 80px !important;
-  }
-  .main footer {
-    position: static !important;
-    top: unset !important;
-    bottom: unset !important;
-    left: unset !important;
-    transform: unset !important;
   }
   .main footer .fs-14px {
     font-size: 0.625rem;

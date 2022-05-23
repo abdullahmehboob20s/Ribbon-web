@@ -1,5 +1,9 @@
 @use "../utils" as *;
 
+:root {
+  --screen-height: 100vh;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -200,27 +204,13 @@
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
-    border: 6px solid blue;
     height: 100vh !important;
-
-    header {
-      border: 2px solid white;
-    }
 
     .phones {
       flex: unset !important;
       width: 80% !important;
       max-width: 260px !important;
       margin-top: 0 !important;
-      border: 2px solid green;
-    }
-
-    footer {
-      position: static !important;
-      top: unset !important;
-      bottom: unset !important;
-      left: unset !important;
-      transform: unset !important;
     }
   }
 }
@@ -247,11 +237,6 @@
     }
 
     footer {
-      position: static !important;
-      top: unset !important;
-      bottom: unset !important;
-      left: unset !important;
-      transform: unset !important;
       .fs-14px {
         font-size: rem(10);
       }

@@ -1,6 +1,14 @@
 const phones = document.querySelectorAll(".phone");
 var phonesArr = Array.from(phones);
 
+const documentHeight = () => {
+  const doc = document.documentElement;
+  doc.style.setProperty("--screen-height", `${window.innerHeight}px`);
+};
+
+window.addEventListener("resize", documentHeight);
+documentHeight();
+
 for (let i = 0; i < phonesArr.length; i++) {
   phonesArr[i].addEventListener("mouseover", () => {
     phonesArr.forEach((elem) => {
