@@ -1120,11 +1120,6 @@ li {
 .hidden {
   overflow: hidden;
 }
-@media (max-width: 40em) {
-  .hidden {
-    overflow: visible !important;
-  }
-}
 
 .static {
   position: static;
@@ -1196,7 +1191,7 @@ input {
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 .main header {
@@ -1349,12 +1344,18 @@ input {
 @media (max-height: 740px) and (max-width: 1000px) {
   .main {
     justify-content: space-between;
+    border: 2px solid white;
+    height: 100vh !important;
+  }
+  .main header {
+    border: 2px solid white;
   }
   .main .phones {
     flex: unset !important;
     width: 80% !important;
     max-width: 260px !important;
     margin-top: 0 !important;
+    border: 2px solid green;
   }
   .main footer {
     border: 2px solid red;
