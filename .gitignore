@@ -1,2 +1,4 @@
-.sass-cache*
-index.css.map
+# .sass-cache*
+# index.css.map
+node_modules
+public/

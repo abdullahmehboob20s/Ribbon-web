@@ -1,5 +1,5 @@
 {
-  "name": "project",
+  "name": "ribbon-web",
   "version": "0.1.0",
   "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
   "main": "public/index.html",
@@ -7,8 +7,12 @@
   "scripts": {
     "build:sass": "sass  --no-source-map src/sass:public/css",
     "copy:html": "copyfiles -u 1 ./src/*.html public",
+    "watch:html": "onchange \"src/*.html\" -- npm run copy:html",
+    "copy:assets": "copyfiles -u 1 ./src/assets/**/* public",
+    "watch:assets": "onchange \"/src/assets/**/*\" -- npm run copy:assets",
+    "copy:js": "copyfiles -u 1 ./src/js/**/* public",
+    "watch:js": "onchange \"src/js/**/*\" -- npm run copy:js",
     "copy": "npm-run-all --parallel copy:*",
-    "watch:html": "onchange 'src/*.html' -- npm run copy:html",
     "watch:sass": "sass  --no-source-map --watch src/sass:public/css",
     "watch": "npm-run-all --parallel watch:*",
     "serve": "browser-sync start --server public --files public",
