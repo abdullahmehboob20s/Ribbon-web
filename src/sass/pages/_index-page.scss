@@ -314,3 +314,20 @@
     }
   }
 }
+
+@media (max-height: 680px) {
+  .main {
+    .phones {
+      width: 80% !important;
+      max-width: 260px !important;
+      margin-top: 0 !important;
+    }
+  }
+}
+@media (max-height: 560px) {
+  .main {
+    .phones {
+      max-width: 220px !important;
+    }
+  }
+}
