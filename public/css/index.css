@@ -1481,6 +1481,11 @@ input {
 .about-us .about-ribbon {
   position: absolute;
 }
+.about-us .about-description {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
 .about-us .about-ribbon.one {
   left: 0;
   top: 20%;

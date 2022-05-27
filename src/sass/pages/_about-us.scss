@@ -5,6 +5,12 @@
     position: absolute;
   }
 
+  .about-description {
+    max-width: rem(800);
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .about-ribbon.one {
     left: 0;
     top: 20%;
