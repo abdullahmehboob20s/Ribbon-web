@@ -26,10 +26,10 @@
       align-items: center;
       justify-content: center;
 
-      & button:nth-child(1) {
+      & ._btn:nth-child(1) {
         width: rem(162);
       }
-      & button:nth-child(2) {
+      & ._btn:nth-child(2) {
         width: rem(144);
       }
 
@@ -269,10 +269,10 @@
   .main {
     header {
       .buttons {
-        & button:nth-child(1) {
+        & ._btn:nth-child(1) {
           width: 132px;
         }
-        & button:nth-child(2) {
+        & ._btn:nth-child(2) {
           width: 114px;
         }
       }
@@ -294,10 +294,10 @@
 @include breakpoint(large) {
   .main {
     .buttons {
-      & button:nth-child(1) {
+      & ._btn:nth-child(1) {
         width: rem(112) !important;
       }
-      & button:nth-child(2) {
+      & ._btn:nth-child(2) {
         width: rem(102) !important;
       }
 
@@ -351,10 +351,10 @@
   .main {
     header {
       .buttons {
-        & button:nth-child(1) {
+        & ._btn:nth-child(1) {
           width: 112px;
         }
-        & button:nth-child(2) {
+        & ._btn:nth-child(2) {
           width: 94px;
         }
       }

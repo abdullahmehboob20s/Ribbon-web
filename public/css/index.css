@@ -1212,10 +1212,10 @@ input {
   align-items: center;
   justify-content: center;
 }
-.main header .buttons button:nth-child(1) {
+.main header .buttons ._btn:nth-child(1) {
   width: 10.125rem;
 }
-.main header .buttons button:nth-child(2) {
+.main header .buttons ._btn:nth-child(2) {
   width: 9rem;
 }
 .main header .buttons > :not(:last-child) {
@@ -1397,10 +1397,10 @@ input {
   }
 }
 @media (max-width: 106.25em) {
-  .main header .buttons button:nth-child(1) {
+  .main header .buttons ._btn:nth-child(1) {
     width: 132px;
   }
-  .main header .buttons button:nth-child(2) {
+  .main header .buttons ._btn:nth-child(2) {
     width: 114px;
   }
 }
@@ -1414,10 +1414,10 @@ input {
   }
 }
 @media (max-width: 64em) {
-  .main .buttons button:nth-child(1) {
+  .main .buttons ._btn:nth-child(1) {
     width: 7rem !important;
   }
-  .main .buttons button:nth-child(2) {
+  .main .buttons ._btn:nth-child(2) {
     width: 6.375rem !important;
   }
   .main .buttons > :not(:last-child) {
@@ -1458,10 +1458,10 @@ input {
   }
 }
 @media (max-width: 40em) {
-  .main header .buttons button:nth-child(1) {
+  .main header .buttons ._btn:nth-child(1) {
     width: 112px;
   }
-  .main header .buttons button:nth-child(2) {
+  .main header .buttons ._btn:nth-child(2) {
     width: 94px;
   }
 }
